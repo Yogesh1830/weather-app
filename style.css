@@ -1,0 +1,110 @@
+/* Core Document Styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+header p {
+    margin: 0 0 1.5rem 0;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* Form Search UI Controls */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#city-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#search-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 0.75rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#search-btn:hover {
+    background-color: #7dd3fc;
+}
+
+/* Dynamic Data Layout Containers */
+.weather-info {
+    margin-top: 1.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+#city-name {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.temp-display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#condition {
+    text-transform: capitalize;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.details-grid {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label { color: #94a3b8; }
+.value { font-weight: bold; }
+
+.error-text { color: #f87171; font-weight: bold; }
+.hidden { display: none; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
