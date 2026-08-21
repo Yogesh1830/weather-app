@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        <header>
+            <h1>Weather Finder</h1>
+            <p>Assignment 1: Fetch API & JSON</p>
+        </header>
+
+        <main>
+            <!-- Search Interface -->
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <!-- Weather Details Output Card -->
+            <div id="weather-info" class="weather-info hidden">
+                <h2 id="city-name">City Name</h2>
+                <div class="weather-meta">
+                    <p class="temp-display"><span id="temperature">--</span>°C</p>
+                    <p id="condition">Condition</p>
+                </div>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity" class="value">--%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error State Message Display -->
+            <p id="error-msg" class="error-text hidden">City not found. Please try again.</p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
